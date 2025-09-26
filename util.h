@@ -11,22 +11,28 @@
  *  Both functions should run in time O(n*log(n)) and not O(n^2)
  */
 template <typename T>
-std::set<T> setIntersection(std::set<T>& s1, std::set<T>& s2)
+std::set<T> setIntersection(std::set<T>& s1, std::set<T>& s2) // should be n iterator * log(n) search 
 {
+    set<T> intersectSet; 
 
+    for(T keyword : s1){
+        if (s2.count(keyword) == 1){
+            intersectSet.insert(keyword); 
+        }
+    }
 
-
-
-
+    return intersectSet; 
 }
 template <typename T>
-std::set<T> setUnion(std::set<T>& s1, std::set<T>& s2)
+std::set<T> setUnion(std::set<T>& s1, std::set<T>& s2) // should be n iterator * log(n) add 
 {
+    set<T> unionSet = s1; 
 
+    for(T keyword : s2){
+        unionSet.insert(keyword);
+    }
 
-
-
-
+    return unionSet; 
 }
 
 /***********************************************/
