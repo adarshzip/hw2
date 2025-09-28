@@ -13,7 +13,7 @@
 template <typename T>
 std::set<T> setIntersection(std::set<T>& s1, std::set<T>& s2) // should be n iterator * log(n) search 
 {
-    set<T> intersectSet; 
+    std::set<T> intersectSet; 
 
     for(T keyword : s1){
         if (s2.count(keyword) == 1){
@@ -26,7 +26,7 @@ std::set<T> setIntersection(std::set<T>& s1, std::set<T>& s2) // should be n ite
 template <typename T>
 std::set<T> setUnion(std::set<T>& s1, std::set<T>& s2) // should be n iterator * log(n) add 
 {
-    set<T> unionSet = s1; 
+    std::set<T> unionSet = s1; 
 
     for(T keyword : s2){
         unionSet.insert(keyword);
