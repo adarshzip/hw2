@@ -84,7 +84,7 @@ void MyDataStore::dump(ostream& ofile){
 }
 
 void MyDataStore::addToCart(vector<Product*> hits, string username, int hitNum){
-    if(hitNum > hits.size()){ // too big hit
+    if(hitNum > hits.size() or hitNum < 1){ // too big/small hit
         cout << "Invalid Request" << endl;
         return;  
     }
@@ -109,7 +109,7 @@ void MyDataStore::viewCart(string username){
     int idx = 1; 
 
     for(Product* p : cart){
-        cout << idx << ".\t" << p->displayString() << endl; 
+        cout << "Item " << idx << endl << p->displayString() << endl; 
         idx += 1; 
     }
 }
