@@ -84,7 +84,7 @@ void MyDataStore::dump(ostream& ofile){
 }
 
 void MyDataStore::addToCart(vector<Product*> hits, string username, int hitNum){
-    if(hitNum >= hits.size()){ // too big hit
+    if(hitNum > hits.size()){ // too big hit
         cout << "Invalid Request" << endl;
         return;  
     }
