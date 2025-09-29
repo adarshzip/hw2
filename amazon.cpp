@@ -103,7 +103,7 @@ int main(int argc, char* argv[])
 	    /* Add support for other commands here */
             else if(cmd == "ADD"){
                 string username; 
-                int hitNum; 
+                size_t hitNum; 
                 if (ss >> username and ss >> hitNum){
                     ds.addToCart(hits, username, hitNum);
                 }
